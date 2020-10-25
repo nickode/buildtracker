@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Build Tracker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="container">
+  <iframe name="module" src="/builds"></iframe>
+  <iframe name="module" hidden src="/search"></iframe>
+  <iframe name="module" hidden src="/settings"></iframe>
+</ion-content>
+
+<ion-footer>
+  <ion-segment scrollable (ionChange)="setDashboardPage($event)">
+    <ion-segment-button value="/builds">
+      <ion-icon name="hammer-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="/search">
+      <ion-icon name="globe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="/settings">
+      <ion-icon name="settings-outline"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-footer>
